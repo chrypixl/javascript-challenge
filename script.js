@@ -61,13 +61,14 @@ const trackEmployeeData = function() {
   const employees = collectEmployees();
 
   console.table(employees);
-
+//console.table(employees) is undefined.
   displayAverageSalary(employees);
 
   console.log('==============================');
+  
 
   getRandomEmployee(employees);
-
+//Cannot read properties of undefined (reading 'sort') at htmlButtonElement.trackEmployeeData;
   employees.sort(function(a,b) {
     if (a.lastName < b.lastName) {
       return -1;
@@ -79,5 +80,5 @@ const trackEmployeeData = function() {
   displayEmployees(employees);
 }
 
-// Add event listener to 'Add Employees' button
+// Add event listener to 'Add Employees' button;
 addEmployeesBtn.addEventListener('click', trackEmployeeData);
