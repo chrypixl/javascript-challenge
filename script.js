@@ -1,6 +1,6 @@
 // Get a reference to the #add-employees-btn element
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
-const employees = [];
+let employees = [];
 const employee = {
   firstName: "First Name",
   lastName: "Last Name",
@@ -10,20 +10,30 @@ const employee = {
 addEmployeesBtn.addEventListener("click", collectEmployees);
 // Collect employee data
 function collectEmployees() {
-  let firstName = prompt("First name:");
-        let lastName = prompt("Last name:");
-        let salaryInput = prompt("Employee's salary:");
-        let salary = isNaN(parseInt(salaryInput)) ? 0 : parseInt(salaryInput);
 
-        let employee = {
-            firstName: firstName,
-            lastName: lastName,
-            salary: salary
-        }
-  // TODO: Get user input to create and return an array of employee objects
+  while (true) {
+    let firstName = prompt("First name (or type 'exit' to finish):");
+    if (firstName.toLowerCase() === 'exit') {
+      break;
+    }
+
+    let lastName = prompt("Last name:");
+    let salaryInput = prompt("Employee's salary:");
+    let salary = isNaN(parseInt(salaryInput)) ? 0 : parseInt(salaryInput);
+
+    let employee = {
+      firstName: firstName,
+      lastName: lastName,
+      salary: salary
+    };
+
+    employees.push(employee);
+  }
+
+  return employees;
 }
 
-employees.push(employee);
+
 
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
