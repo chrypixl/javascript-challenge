@@ -120,9 +120,9 @@ This Challenge is graded based on the following criteria:
 
 You are required to submit the following for review:
 
-* The URL of the deployed application.
+* The URL of the deployed application. - https://chrypixl.github.io/javascript-challenge/
 
-* The URL of the GitHub repository, with a unique name and a readme describing the project.
+* The URL of the GitHub repository, with a unique name and a readme describing the project. - https://github.com/chrypixl/javascript-challenge.git
 
 - - -
 © 2024 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
